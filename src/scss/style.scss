@@ -1,0 +1,73 @@
+@import '~normalize.css';
+@import '~reset-css';
+
+@import 'fonts';
+@import 'vars';
+
+@import 'blocks/container';
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/section';
+@import 'blocks/main';
+@import 'blocks/title';
+@import 'blocks/rounded-button';
+@import 'blocks/menu';
+@import 'blocks/lang-switcher';
+@import 'blocks/go-further';
+@import 'blocks/slider';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/order-button';
+
+@import 'sections/about';
+@import 'sections/brands';
+@import 'sections/services';
+@import 'sections/prices';
+
+body {
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+  font-weight: $main-font-weight;
+  color: $main-font-color;
+  background-color: $main-background-color;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    padding: 0 24px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #B5B6BC;
+}
+
+.swiper-wrapper {
+  height: auto;
+}

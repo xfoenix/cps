@@ -1,0 +1,31 @@
+.main {
+  padding-top: 24px;
+
+  @media (min-width: 1360px) {
+    padding-top: 42px;
+    margin-left: 320px;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .96);
+    z-index: 2;
+  }
+
+  &.menu-opened::after,
+  &.modal--feedback-opened::after,
+  &.modal--callback-opened::after {
+    display: block;
+  }
+
+  &.modal--feedback-opened::after,
+  &.modal--callback-opened::after{
+    z-index: 100;
+  }
+}

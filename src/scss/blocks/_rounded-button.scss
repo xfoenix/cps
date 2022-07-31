@@ -1,0 +1,114 @@
+.rounded-button {
+  padding: 0;
+  height: 40px;
+  font-size: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &:hover,
+  &:active {
+    color: $additional-font-color;
+  }
+
+  &--navigation {
+    margin: 0 8px;
+  }
+  &--menu:not(:last-of-type) {
+    margin-right: 16px;
+  }
+  &--modal {
+    margin: 24px 0 8px 16px;
+  }
+  &--title {
+    display: none;
+
+    @media (min-width: 1360px) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-left: 32px;
+    }
+
+    &::before {
+      margin-left: 8px;
+    }
+  }
+  &--icon {
+    &::before {
+      background: $icon-color no-repeat center center;
+      transition: background-color .3s;
+    }
+    &:hover::before {
+      background-color: $navigation-color;
+    }
+
+    &--message {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#message-view');
+        background-size: 18px 19px;
+      }
+    }
+    &--callback {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#callback-view');
+        background-size: 20px 22px;
+        background-position: 10px 10px;
+      }
+    }
+    &--profile {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#profile-view');
+        background-size: 20px 20px;
+        background-position: 10px 9px;
+      }
+    }
+    &--burger {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#burger-view');
+        background-size: 18px 20px;
+        background-position: 11px 12px;
+      }
+    }
+    &--services {
+      @media (min-width: 1360px) {
+        margin-left: auto;
+      }
+
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#services-view');
+        background-size: 20px 20px;
+      }
+    }
+    &--search1 {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#search01-view');
+        background-size: 16px 20px;
+      }
+    }
+    &--search2 {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#search02-view');
+        background-size: 18px 18px;
+      }
+    }
+    &--close {
+      &::before {
+        background-image: url('../img/icons/buttons-sprite.svg#close-view');
+        background-size: 15px 15px;
+      }
+    }
+  }
+}

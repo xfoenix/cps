@@ -1,5 +1,3 @@
-# Учебный проект по блоку Web Core
-
 ## Features
 - Babel
 - SCSS
